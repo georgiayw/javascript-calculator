@@ -1,5 +1,22 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
+}
+
 .App {
   text-align: center;
+  background-color: rgb(212, 222, 225);
 }
 
 .App-logo {
@@ -36,3 +53,96 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.calculator {
+  border: 5px solid rgb(122, 156, 183);
+  width: 350px;
+  height: 450px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(122, 156, 183);
+  border-radius: 7px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 5px;
+}
+
+.keys button:first-child {
+  color: rgb(37, 83, 109);
+  grid-column-end: 3;
+  grid-column-start: 1;
+  background-color: rgb(168, 209, 242);
+}
+
+button {
+  border: 1px solid rgb(122, 156, 183);
+  font-size: 28px;
+  min-width: 80px;
+  min-height: 74px;
+  color: rgb(37, 83, 109);
+  background-color: rgb(168, 198, 223);
+  position: relative;
+  font-family: Share Tech Mono, monospace;
+}
+
+button:hover {
+  border: 1px solid rgb(79, 101, 119);
+  color: rgb(122, 156, 183);
+}
+
+.keys button:nth-child(15) {
+  grid-row-end: 6;
+  grid-row-start: 4;
+  grid-column-start: 4;
+  background-color: rgb(76, 131, 175);
+}
+
+.keys button:nth-child(16) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.output {
+  width: 100%;
+  height: 70px;
+  color: white;
+  display: block;
+  font-family: digital;
+}
+
+.result {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  text-align: right;
+  font-size: 20px;
+  color: orange;
+}
+
+#display {
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  text-align: right;
+  height: 35px;
+  font-size: 30px;
+
+}
+
+
+
+
+
